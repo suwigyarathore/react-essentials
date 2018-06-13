@@ -1,0 +1,29 @@
+{
+  "name": "react-essentials",
+  "version": "1.0.0",
+  "description": "This repository depicts all core concepts of react.",
+  "main": "index.js",
+  "scripts": {
+    "start": "httpster -d ./dist --port 8080",
+    "build": "babel ./src/index.js --out-file ./dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suwigyarathore/react-essentials.git"
+  },
+  "author": "Suwigya Rathore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suwigyarathore/react-essentials/issues"
+  },
+  "homepage": "https://github.com/suwigyarathore/react-essentials#readme",
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0"
+  }
+}
