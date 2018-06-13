@@ -1,15 +1,11 @@
+
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { hello, goodbye } from "./lib";
 
-const style = {
-  backgroundColor: 'orange',
-  color: 'white',
-  fontFamily: 'verdana'
-}
-
-ReactDOM.render(
-  <h1 id="title" className='header' style={style}>
-    Hello World
-  </h1>,
+render(<div>
+  {hello}
+  {goodbye}
+</div>,
   document.getElementById('react-container')
 )
