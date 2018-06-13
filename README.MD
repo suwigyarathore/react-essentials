@@ -6,5 +6,6 @@ This repository depicts all core concepts of react.
 
 * Basic React component using CDN  
 * Adding JSX
+* Adding In Browser transpiling for JSX
 
 To Be Continued ...
