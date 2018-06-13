@@ -1,5 +1,5 @@
-const { createElement } = React;
-const { render } = ReactDOM;
+import React from "react";
+import ReactDOM from "react-dom";
 
 const style = {
   backgroundColor: 'orange',
@@ -7,7 +7,7 @@ const style = {
   fontFamily: 'verdana'
 }
 
-render(
+ReactDOM.render(
   <h1 id="title" className='header' style={style}>
     Hello World
   </h1>,
