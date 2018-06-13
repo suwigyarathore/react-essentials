@@ -8,5 +8,6 @@ This repository depicts all core concepts of react.
 * Adding JSX
 * Adding In Browser transpiling for JSX
 * Adding Babel CLI support and bundle creation
+* Setting up build process with webpack 4 and hot module reload
 
 To Be Continued ...
