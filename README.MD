@@ -10,5 +10,6 @@ This repository depicts all core concepts of react.
 * Adding Babel CLI support and bundle creation
 * Setting up build process with webpack 4, hot module reload & prod ready build
 * Setting up JSON loader and inserting components
+* Moving to yarn for faster installation
 
 To Be Continued ...
