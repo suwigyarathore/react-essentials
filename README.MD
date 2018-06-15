@@ -11,5 +11,6 @@ This repository depicts all core concepts of react.
 * Setting up build process with webpack 4, hot module reload & prod ready build
 * Setting up JSON loader and inserting components
 * Moving to yarn for faster installation
+* Integrating sass loader and auto prefixer plugin
 
 To Be Continued ...
