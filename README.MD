@@ -14,5 +14,6 @@ This repository depicts all core concepts of react.
 * Integrating sass loader and auto prefixer plugin
 * Adding component and scss style sheets
 * Adding Props from outside
+* Adding some methods for calculation
 
 To Be Continued ...
