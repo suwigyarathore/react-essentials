@@ -20,5 +20,8 @@ This repository depicts all core concepts of react.
 * Composing components by small components
 * Adding proptypes for proper validation
 * Adding linting by eslint
+* Adding custom validation
+* Working with state
+* Passing state as props from parent to child
 
 To Be Continued ...
