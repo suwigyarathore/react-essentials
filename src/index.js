@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { render } from "react-dom";
-import SkiDayList from "./components/SkiDayList";
 import SkiDayCount from './components/SkiDayCount';
 
 window.React = React;

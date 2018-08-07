@@ -19,5 +19,6 @@ This repository depicts all core concepts of react.
 * Adding react icons
 * Composing components by small components
 * Adding proptypes for proper validation
+* Adding linting by eslint
 
 To Be Continued ...

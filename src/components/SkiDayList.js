@@ -1,6 +1,6 @@
-import { MdTerrain } from "react-icons/md";
-import { TiWeatherSnow } from "react-icons/ti";
 import SkiDayRow from "./SkiDayRow";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const SkiDayList = ({ days }) => (
   <table>
@@ -23,5 +23,9 @@ const SkiDayList = ({ days }) => (
     </tbody>
   </table>
 )
+
+SkiDayList.propTypes = {
+  days: PropTypes.object
+}
 
 export default SkiDayList;

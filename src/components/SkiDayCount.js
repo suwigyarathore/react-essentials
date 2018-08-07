@@ -4,6 +4,7 @@ import { MdTerrain } from "react-icons/md";
 import { TiWeatherSnow } from "react-icons/ti";
 import { FaCalendar } from "react-icons/fa";
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const percentToDecimal = (dec) => {
   return `${ dec * 100 }%`;
