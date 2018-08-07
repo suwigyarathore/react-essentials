@@ -18,5 +18,6 @@ This repository depicts all core concepts of react.
 * Making component stateless
 * Adding react icons
 * Composing components by small components
+* Adding proptypes for proper validation
 
 To Be Continued ...
