@@ -15,5 +15,7 @@ This repository depicts all core concepts of react.
 * Adding component and scss style sheets
 * Adding Props from outside
 * Adding some methods for calculation
+* Making component stateless
+* Adding react icons
 
 To Be Continued ...

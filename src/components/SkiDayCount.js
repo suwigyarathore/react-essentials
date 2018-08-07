@@ -1,37 +1,38 @@
 
-import { Component } from 'react';
 import '../stylesheets/ui.scss';
+import { MdTerrain } from "react-icons/md";
+import { TiWeatherSnow } from "react-icons/ti";
+import { FaCalendar } from "react-icons/fa";
 
-class SkiDayCount extends Component {
-  percentToDecimal (dec) {
-    return `${ dec * 100 }%`;
-  }
-
-  calcGoalProgress (goal, total) {
-    return this.percentToDecimal(total / goal);
-  }
-
-  render () {
-    return (
-      <div className="ski-day-count">
-        <div className="total-days">
-          <span>{this.props.total}</span>
-          <span>Days</span>
-        </div>
-        <div className="powder-days">
-          <span>{this.props.powder}</span>
-          <span>Days</span>
-        </div>
-        <div className="backcountry-days">
-          <span>{this.props.backcountry}</span>
-          <span>days</span>
-        </div>
-        <div>
-          <span>{this.calcGoalProgress(this.props.goal, this.props.total)}</span>
-        </div>
-      </div>
-    );
-  }
+const percentToDecimal = (dec) => {
+  return `${ dec * 100 }%`;
 }
+
+const calcGoalProgress = (goal, total) => {
+  return percentToDecimal(total / goal);
+}
+
+const SkiDayCount = ({ total, powder, backcountry, goal }) => (
+  <div className="ski-day-count">
+    <div className="total-days">
+      <span>{total}</span>
+      <FaCalendar />
+      <span>Days</span>
+    </div>
+    <div className="powder-days">
+      <span>{powder}</span>
+      <TiWeatherSnow />
+      <span>Days</span>
+    </div>
+    <div className="backcountry-days">
+      <span>{backcountry}</span>
+      <MdTerrain />
+      <span>days</span>
+    </div>
+    <div>
+      <span>{calcGoalProgress(goal, total)}</span>
+    </div>
+  </div>
+);
 
 export default SkiDayCount;
