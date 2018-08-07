@@ -17,5 +17,6 @@ This repository depicts all core concepts of react.
 * Adding some methods for calculation
 * Making component stateless
 * Adding react icons
+* Composing components by small components
 
 To Be Continued ...
