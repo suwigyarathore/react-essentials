@@ -23,9 +23,9 @@ const SkiDayRow = ({ resort,
   )
 
 SkiDayRow.propTypes = {
-  date: PropTypes.date,
-  resort: PropTypes.string,
-  powder: PropTypes.number,
-  backcountry: PropTypes.number
+  date: PropTypes.instanceOf(Date).isRequired,
+  resort: PropTypes.string.isRequired,
+  powder: PropTypes.bool,
+  backcountry: PropTypes.bool
 }
 export default SkiDayRow;

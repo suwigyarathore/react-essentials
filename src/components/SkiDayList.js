@@ -1,6 +1,5 @@
 import SkiDayRow from "./SkiDayRow";
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const SkiDayList = ({ days }) => (
   <table>
@@ -25,7 +24,18 @@ const SkiDayList = ({ days }) => (
 )
 
 SkiDayList.propTypes = {
-  days: PropTypes.object
+  days: ({ days }) => {
+    if (!Array.isArray(days))
+    {
+      return new Error('Days should be array')
+    } else if (!days.length > 0)
+    {
+      return new Error('Days should not be empty')
+    } else
+    {
+      return null
+    }
+  }
 }
 
 export default SkiDayList;
