@@ -12,5 +12,6 @@ This repository depicts all core concepts of react.
 * Setting up JSON loader and inserting components
 * Moving to yarn for faster installation
 * Integrating sass loader and auto prefixer plugin
+* Adding component and scss style sheets
 
 To Be Continued ...
