@@ -23,5 +23,6 @@ This repository depicts all core concepts of react.
 * Adding custom validation
 * Working with state
 * Passing state as props from parent to child
+* Adding Static routes with React-Router V4 using Hash Router
 
 To Be Continued ...
