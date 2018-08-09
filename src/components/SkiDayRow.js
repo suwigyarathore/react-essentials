@@ -1,7 +1,7 @@
-import { MdTerrain } from "react-icons/md";
-import { TiWeatherSnow } from "react-icons/ti";
-import React from 'react';
-import PropTypes from 'prop-types';
+import { MdTerrain } from 'react-icons/md'
+import { TiWeatherSnow } from 'react-icons/ti'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 
 const SkiDayRow = ({ resort,
@@ -28,4 +28,4 @@ SkiDayRow.propTypes = {
   powder: PropTypes.bool,
   backcountry: PropTypes.bool
 }
-export default SkiDayRow;
+export default SkiDayRow

@@ -12,7 +12,9 @@ import Whoops404 from './components/Whoops404'
 render(<Router>
   <Switch>
     <Route exact path='/' component={App} />
-    {/* both /roster and /roster/:number begin with /roster */}
+    <Route exact path='/list-days' component={App} />
+    <Route path='/list-days/:filter' component={App} />
+    <Route exact path='/add-day' component={App} />
     <Route path='*' component={Whoops404} />
   </Switch>
 </Router>,

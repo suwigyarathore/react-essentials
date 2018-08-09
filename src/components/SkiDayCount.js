@@ -1,17 +1,17 @@
 
-import '../stylesheets/ui.scss';
-import { MdTerrain } from "react-icons/md";
-import { TiWeatherSnow } from "react-icons/ti";
-import { FaCalendar } from "react-icons/fa";
-import PropTypes from 'prop-types';
-import React from 'react';
+import '../stylesheets/ui.scss'
+import { MdTerrain } from "react-icons/md"
+import { TiWeatherSnow } from "react-icons/ti"
+import { FaCalendar } from "react-icons/fa"
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const percentToDecimal = (dec) => {
-  return `${ dec * 100 }%`;
+  return `${ dec * 100 }%`
 }
 
 const calcGoalProgress = (goal, total) => {
-  return percentToDecimal(total / goal);
+  return percentToDecimal(total / goal)
 }
 
 const SkiDayCount = ({ total, powder, backcountry, goal }) => (

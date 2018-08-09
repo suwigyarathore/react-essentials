@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import SkiDayList from './SkiDayList';
-import SkiDayCount from './SkiDayCount';
+import React, { Component } from 'react'
+import SkiDayList from './SkiDayList'
+import SkiDayCount from './SkiDayCount'
+import AddDayForm from './AddDayForm'
+import PropTypes from 'prop-types'
+import Menu from './Menu';
 
 class App extends Component {
   constructor (props) {
@@ -41,12 +44,24 @@ class App extends Component {
   render () {
     return (
       <div className="app">
-        <SkiDayList days={this.state.allSkiDays} />
-        <SkiDayCount total={this.countDays()}
-          powder={this.countDays('powder')} backcountry={this.countDays('backcountry')} />
+        <Menu />
+        {(this.props.location.pathname === '/') ? <SkiDayCount total={this.countDays()}
+          powder={this.countDays('powder')} backcountry={this.countDays('backcountry')} /> :
+          (this.props.location.pathname === '/add-day') ? <AddDayForm /> :
+            <SkiDayList
+              days={this.state.allSkiDays}
+              filter={this.props.match.params.filter} />
+        }
       </div>
     );
   }
 }
+
+App.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
+  match: PropTypes.object
+};
 
 export default App;
