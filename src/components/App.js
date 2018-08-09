@@ -4,6 +4,8 @@ import SkiDayCount from './SkiDayCount'
 import AddDayForm from './AddDayForm'
 import PropTypes from 'prop-types'
 import Menu from './Menu';
+import '../stylesheets/ui.scss'
+import '../stylesheets/index.scss'
 
 class App extends Component {
   constructor (props) {
@@ -64,7 +66,7 @@ class App extends Component {
             powder={this.countDays('powder')}
             backcountry={this.countDays('backcountry')} /> :
           (this.props.location.pathname === '/add-day') ?
-            <AddDayForm onNewDay={this.addDay} /> :
+            <AddDayForm onNewDay={this.addDay} history={this.props.history} /> :
             <SkiDayList
               days={this.state.allSkiDays}
               filter={this.props.match.params.filter} />
@@ -78,7 +80,8 @@ App.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
   }).isRequired,
-  match: PropTypes.object
+  match: PropTypes.object,
+  history: PropTypes.object
 };
 
 export default App;

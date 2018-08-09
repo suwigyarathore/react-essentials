@@ -1,11 +1,61 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React, { Component } from 'react';
 
-const AddDayForm = ({ resort,
-  date,
+const tahoeResorts = [
+  "Alpine Meadows",
+  "Boreal",
+  "Diamond Peak",
+  "Donner Ski Ranch",
+  "Heavenly",
+  "Homewood",
+  "Kirkwood",
+  "Mt. Rose",
+  "Northstar",
+  "Squaw Valley",
+  "Sugar Bowl"
+];
+
+class AutoComplete extends Component {
+
+  constructor (props) {
+    super(props)
+    this._autoCompleteListRef
+  }
+
+  get value () {
+    return this._autoCompleteListRef.value
+  }
+
+  set value (inputValue) {
+    this._autoCompleteListRef.value = inputValue
+  }
+
+  render () {
+    return (
+      <div>
+        <input
+          ref={value => this._autoCompleteListRef = value}
+          type="text"
+          list="tahoe-resorts" />
+        <datalist id="tahoe-resorts">
+          {this.props.options.map(
+            (opt, i) => <option key={i}>{opt}</option>
+          )}
+        </datalist>
+      </div>
+    )
+  }
+}
+
+AutoComplete.propTypes = {
+  options: PropTypes.array,
+}
+
+const AddDayForm = ({ date,
   powder,
   backcountry,
-  onNewDay }) => {
+  onNewDay,
+  history }) => {
 
   let _resort;
   let _backcountry;
@@ -25,16 +75,14 @@ const AddDayForm = ({ resort,
     _powder.checked = false
     _backcountry.checked = false
 
+    history.push('/list-days')
+
   }
 
   return (<form onSubmit={submit} className="add-day-form">
     <label htmlFor="resort">Resort Name</label>
-    <input id="resort"
-      type="text"
-      required
-      defaultValue={resort}
-      ref={input => _resort = input}
-    />
+    <AutoComplete options={tahoeResorts}
+      ref={input => _resort = input} />
 
     <label htmlFor="date">Date</label>
     <input id="date"
@@ -78,7 +126,8 @@ AddDayForm.propTypes = {
   date: PropTypes.string.isRequired,
   powder: PropTypes.bool.isRequired,
   backcountry: PropTypes.bool.isRequired,
-  onNewDay: PropTypes.func.required
+  onNewDay: PropTypes.func,
+  history: PropTypes.object
 }
 
 export default AddDayForm;

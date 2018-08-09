@@ -1,5 +1,3 @@
-
-import '../stylesheets/ui.scss'
 import { MdTerrain } from "react-icons/md"
 import { TiWeatherSnow } from "react-icons/ti"
 import { FaCalendar } from "react-icons/fa"

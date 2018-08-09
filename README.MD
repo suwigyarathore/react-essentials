@@ -28,5 +28,6 @@ This repository depicts all core concepts of react.
 * Creating form and refs by es6 classes
 * Creating refs in stateless component
 * Adding 2 way data binding
+* Adding auto complete component and better styling
 
 To Be Continued ...
