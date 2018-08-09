@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 const AddDayForm = ({ resort,
   date,
   powder,
-  backcountry }) => {
+  backcountry,
+  onNewDay }) => {
 
   let _resort;
   let _backcountry;
@@ -12,8 +13,18 @@ const AddDayForm = ({ resort,
   let _powder;
 
   const submit = (e) => {
-    debugger;
     e.preventDefault();
+    onNewDay({
+      resort: _resort.value,
+      date: new Date(_date.value),
+      powder: _powder.checked,
+      backcountry: _backcountry.checked,
+    })
+    _resort.value = ''
+    _date.value = ''
+    _powder.checked = false
+    _backcountry.checked = false
+
   }
 
   return (<form onSubmit={submit} className="add-day-form">
@@ -67,6 +78,7 @@ AddDayForm.propTypes = {
   date: PropTypes.string.isRequired,
   powder: PropTypes.bool.isRequired,
   backcountry: PropTypes.bool.isRequired,
+  onNewDay: PropTypes.func.required
 }
 
 export default AddDayForm;

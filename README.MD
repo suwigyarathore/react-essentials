@@ -27,6 +27,6 @@ This repository depicts all core concepts of react.
 * Adding complex nested routes and path params
 * Creating form and refs by es6 classes
 * Creating refs in stateless component
-
+* Adding 2 way data binding
 
 To Be Continued ...
