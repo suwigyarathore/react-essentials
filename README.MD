@@ -25,6 +25,8 @@ This repository depicts all core concepts of react.
 * Passing state as props from parent to child
 * Adding Static routes with React-Router V4 using Hash Router
 * Adding complex nested routes and path params
-* Creating form and refs
+* Creating form and refs by es6 classes
+* Creating refs in stateless component
+
 
 To Be Continued ...
