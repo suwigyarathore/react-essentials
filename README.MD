@@ -2,6 +2,10 @@
 
 This repository depicts all core concepts of react.
 
+## Application Screenshot
+
+![Screenshot](./screenshot.png "Title")
+
 ## Concepts Explored
 
 * Basic React component using CDN  
@@ -29,5 +33,3 @@ This repository depicts all core concepts of react.
 * Creating refs in stateless component
 * Adding 2 way data binding
 * Adding auto complete component and better styling
-
-To Be Continued ...
